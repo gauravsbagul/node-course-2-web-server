@@ -70,7 +70,7 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/projects", (req, res) => {
-  res.render("Projects.hbs", {
+  res.render("projects.hbs", {
     pageTitle: "Projects page",
     welcomeMessage: "Welcome to my website",
   });
