@@ -52,9 +52,27 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/json", (req, res) => {
+  // console.log("TCL:: req", req);
+  // console.log("TCL:: res", res);
+  // res.send("<h1>Hello express!</h1>");
+  res.send({
+    name: "Gaurav",
+    likes: [1, 2, 3, 4],
+  });
+});
+
 app.get("/about", (req, res) => {
   res.render("about.hbs", {
     pageTitle: "About page",
+    welcomeMessage: "Welcome to my website",
+  });
+});
+
+app.get("/projects", (req, res) => {
+  res.render("Projects.hbs", {
+    pageTitle: "Projects page",
+    welcomeMessage: "Welcome to my website",
   });
 });
 
